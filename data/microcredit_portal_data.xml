@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Applications / Categories -->
+        <record model="ir.module.category" id="module_category_microcredit_portal_management">
+            <field name="name">Administration Portal</field>
+            <field name="description">Helps you handle your microcredit system administration portal.</field>
+            <field name="sequence">17</field>
+        </record>
+
+        <record model="ir.module.category" id="module_category_microcredit_ussd_application">
+            <field name="name">USSD Application</field>
+            <field name="description">Helps you handle your microcredit system ussd application.</field>
+            <field name="sequence">18</field>
+        </record>
+
+        <!-- Add applications to groups / Microcredit portal groups-->
+        <record model="res.groups" id="group_microcredit_user">
+            <field name="category_id" ref="module_category_microcredit_portal_management"/>
+        </record>
+
+        <record model="res.groups" id="group_microcredit_supervisor">
+            <field name="category_id" ref="module_category_microcredit_portal_management"/>
+        </record>
+
+        <record model="res.groups" id="group_microcredit_admin">
+            <field name="category_id" ref="module_category_microcredit_portal_management"/>
+        </record>
+
+
+        <!-- Add applications to groups / Microcredit USSD app groups-->
+        <record model="res.groups" id="group_microcredit_ussd_dealer">
+            <field name="category_id" ref="module_category_microcredit_ussd_application"/>
+            <field name="alias">DEALER</field>
+        </record>
+
+        <record model="res.groups" id="group_microcredit_ussd_collector">
+            <field name="category_id" ref="module_category_microcredit_ussd_application"/>
+            <field name="alias">COLLECTOR_AGENT</field>
+        </record>
+
+        <record model="res.groups" id="group_microcredit_ussd_pos_employee">
+            <field name="category_id" ref="module_category_microcredit_ussd_application"/>
+            <field name="alias">POS</field>
+        </record>
+
+        <!-- Company profiles -->
+        <record id="microcredit_company_profile_dealer" model="microcredit.company.profile">
+            <field name="alias">DISTRIBUTOR</field>
+            <field name="name">Distribuidor</field>
+        </record>
+
+        <record id="microcredit_company_profile_collector" model="microcredit.company.profile">
+            <field name="alias">COLLECTOR</field>
+            <field name="name">Agencia de cobranza</field>
+        </record>
+
+        <record id="microcredit_company_profile_dealer_collector" model="microcredit.company.profile">
+            <field name="alias">DISTRIBUTOR_COLLECTOR</field>
+            <field name="name">Distribuidor y Agencia de cobranza</field>
+        </record>
+
+        <record id="microcredit_company_profile_credit_entity" model="microcredit.company.profile">
+            <field name="alias">CREDIT_ENTITY</field>
+            <field name="name">Entidad crediticia</field>
+        </record>
+
+        <record id="microcredit_company_profile_pdv" model="microcredit.company.profile">
+            <field name="alias">POS</field>
+            <field name="name">Punto de venta</field>
+        </record>
+
+
+        <!-- Trx status -->
+        <record id="microcredit_trx_status_cr_pending" model="microcredit.trx.status">
+            <field name="description">Pendiente de aprobación</field>
+            <field name="alias">REQUEST CREDIT PENDING</field>
+            <field name="approved" eval="False"/>
+        </record>
+        <record id="microcredit_trx_status_cr_approved" model="microcredit.trx.status">
+            <field name="description">Crédito aprobado</field>
+            <field name="alias">REQUEST CREDIT APPROVED</field>
+            <field name="approved" eval="True"/>
+        </record>
+        <record id="microcredit_trx_status_cr_rejected" model="microcredit.trx.status">
+            <field name="description">Crédito rechazado</field>
+            <field name="alias">REQUEST CREDIT REJECTED</field>
+            <field name="approved" eval="False"/>
+        </record>
+        <record id="microcredit_trx_status_cr_paid" model="microcredit.trx.status">
+            <field name="description">Crédito pagado</field>
+            <field name="alias">REQUEST CREDIT PAID</field>
+            <field name="approved" eval="True"/>
+        </record>
+
+
+        <record id="microcredit_trx_status_pay_pending" model="microcredit.trx.status">
+            <field name="description">Pendiente de aprobación</field>
+            <field name="alias">PAY CREDIT PENDING</field>
+            <field name="approved" eval="False"/>
+        </record>
+        <record id="microcredit_trx_status_pay_approved" model="microcredit.trx.status">
+            <field name="description">Pago aprobado</field>
+            <field name="alias">PAY CREDIT APPROVED</field>
+            <field name="approved" eval="True"/>
+        </record>
+        <record id="microcredit_trx_status_pay_rejected" model="microcredit.trx.status">
+            <field name="description">Pago rechazado</field>
+            <field name="alias">PAY CREDIT REJECTED</field>
+            <field name="approved" eval="False"/>
+        </record>
+
+
+        <record id="microcredit_trx_status_comm_pending" model="microcredit.trx.status">
+            <field name="description">Pendiente de aprobación</field>
+            <field name="alias">COMMISSION CREDIT PENDING</field>
+            <field name="approved" eval="False"/>
+        </record>
+        <record id="microcredit_trx_status_comm_approved" model="microcredit.trx.status">
+            <field name="description">Approved commision</field>
+            <field name="alias">COMMISSION CREDIT APPROVED</field>
+            <field name="approved" eval="True"/>
+        </record>
+        <record id="microcredit_trx_status_comm_rejected" model="microcredit.trx.status">
+            <field name="description">Commision rejected</field>
+            <field name="alias">COMMISSION CREDIT REJECTED</field>
+            <field name="approved" eval="False"/>
+        </record>
+        <record id="microcredit_trx_status_comm_exception" model="microcredit.trx.status">
+            <field name="description">Commision exception</field>
+            <field name="alias">COMMISSION CREDIT EXCEPTION</field>
+            <field name="approved" eval="False"/>
+        </record>
+
+
+        <record id="microcredit_trx_status_qry_pending" model="microcredit.trx.status">
+            <field name="description">Pendiente de aprobación</field>
+            <field name="alias">QUERY CREDIT PENDING</field>
+            <field name="approved" eval="False"/>
+        </record>
+        <record id="microcredit_trx_status_qry_approved" model="microcredit.trx.status">
+            <field name="description">Query approved</field>
+            <field name="alias">QUERY CREDIT APPROVED</field>
+            <field name="approved" eval="True"/>
+        </record>
+        <record id="microcredit_trx_status_qry_rejected" model="microcredit.trx.status">
+            <field name="description">Query rejected</field>
+            <field name="alias">QUERY CREDIT REJECTED</field>
+            <field name="approved" eval="False"/>
+        </record>
+
+
+    </data>
+</odoo>

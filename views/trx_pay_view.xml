@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="microcredit_trx_pay_view_form">
+            <field name="name">microcredit.trx.pay.view.form</field>
+            <field name="model">microcredit.trx.pay</field>
+            <field name='arch' type='xml'>
+                <form string="Payments">
+                    <sheet>
+                        <group>
+                            <field name="company_id"/>
+                            <field name="amount"/>
+                            <field name="collector_partner_id" groups="microcredit_portal.group_microcredit_supervisor"/>
+                            <field name="create_date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="microcredit_trx_pay_view_tree" model="ir.ui.view">
+            <field name="name">microcredit.trx.pay.view.tree</field>
+            <field name="model">microcredit.trx.pay</field>
+            <field name="view_mode">tree,form</field>
+            <field name="arch" type="xml">
+                <tree string="Payments">
+                    <field name="trx_extern"/>
+                    <field name="company_id"/>
+                    <field name="collector_partner_name" groups="microcredit_portal.group_microcredit_supervisor"/>
+                    <field name="amount" sum="Total Amount"/>
+                    <field name="create_date"/>
+                    <field name="trx_status_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Filter view-->
+        <record id="filter_microcredit_trx_pay_view" model="ir.ui.view">
+            <field name="name">microcredit.trx.pay.view.filter</field>
+            <field name="model">microcredit.trx.pay</field>
+            <field name="arch" type="xml">
+                <search string="Payment filters">
+                    <filter icon="terp-go-today" string="Today" separator="1" name="today"
+                            domain="[('create_date','&lt;=', (datetime.date.today()).strftime('%Y-%m-%d')),('create_date','&gt;=',
+                            (datetime.date.today()).strftime('%Y-%m-%d'))]" help="Created today"/>
+                    <!--<filter string="Valid" separator="1" name="valid"
+                            domain="[('operation_type_id.alias','=','PAY CREDIT'),('trx_status_id.alias','=','PAY CREDIT APPROVED')]"/>-->
+                    <group expand="1" string="Group By">
+                        <filter string="Collector" context="{'group_by':'collector_partner_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_microcredit_portal_trx_pay_form" model="ir.actions.act_window">
+            <field name="name">Payment Extracts</field>
+            <field name="res_model">microcredit.trx.pay</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('operation_type_id.alias','=','PAY CREDIT'),('trx_status_id.alias','=','PAY CREDIT APPROVED')]</field>
+            <field name="context">{"search_default_today":1}</field>
+        </record>
+
+        <menuitem action="action_microcredit_portal_trx_pay_form"
+          id="microcredit_menu_action_trx_pay_form"
+          parent="menu_microcredit_portal_admin_transactions"
+          sequence="2"
+          groups="group_microcredit_user"/>
+
+    </data>
+</odoo>

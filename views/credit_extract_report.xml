@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Custom report.-->
+<odoo>
+<data>
+    <template id="credit_extract_report">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <h2>Credits granted</h2>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+
+    <!--<template id="credit_extract_report_document">
+            <t t-call="report.external_layout">
+                <div class="page">
+                    <div class="row">
+                        <h3>Title</h3>
+                    </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="credit_extract_report">
+        <t t-call="report.html_container">
+            <t t-foreach="doc_ids" t-as="doc_id">
+                <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'microcredit_portal.credit_extract_report_document')"/>
+            </t>
+        </t>
+    </template>-->
+</data>
+</odoo>

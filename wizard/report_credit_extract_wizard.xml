@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="microcredit_report_credit_extract_wizard_view" model="ir.ui.view">
+            <field name="name">Report credit extract wizard</field>
+            <field name="model">microcredit.report.credit.extract.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Credit extract report">
+                    <group>
+                        <field name="partner_ids"/>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                    </group>
+                    <footer>
+                        <button string="PDF Report" name="report_credit_extract_pdf" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_microcredit_report_credit_extract_wizard_view" model="ir.actions.act_window">
+            <field name="name">Credit extract report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">microcredit.report.credit.extract.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="microcredit_report_credit_extract_wizard_view" />
+            <field name="target">new</field>
+        </record>
+
+<!--         <menuitem name="Credit extract report"
+          action="action_microcredit_report_credit_extract_wizard_view"
+          id="menu_microcredit_report_credit_extract_wizard_view"
+          parent="menu_microcredit_portal_admin_report"
+          sequence="1"/>-->
+
+    </data>
+</odoo>

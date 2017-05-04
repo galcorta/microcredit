@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="report_credit_extract_wizard"
+            model="microcredit.trx.credit"
+            string="Credits extract wizard"
+            report_type="qweb-pdf"
+            name="microcredit_portal.credit.extract.wizard.qweb"
+            attachment_use="False"
+            file="microcredit_portal.credit.extract.wizard.qweb"
+            menu="False"
+        />
+
+    </data>
+</odoo>

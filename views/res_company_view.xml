@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="microcredit_view_company_form" model="ir.ui.view">
+            <field name="name">microcredit.res.company.form</field>
+            <field name="model">res.company</field>
+            <field name='inherit_id' ref='base.view_company_form'/>
+            <field name="arch" type="xml">
+                <label for="rml_header1" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </label>
+                <field name="rml_header1" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <xpath expr="//div[@class='oe_title']" position="inside">
+                    <label for="company_profile_id" class="oe_edit_only"/>
+                    <h4>
+                        <field name="company_profile_id" widget="selection" class="oe_inline"/>
+                        <field name="code" class="oe_inline" attrs="{'invisible':[('company_profile_alias','!=','POS')]}"/>
+                    </h4>
+                </xpath>
+                <field name="city" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="state_id" position="before">
+                    <field name="city_id" class="o_address_state" placeholder="City" style="width: 37%%" options='{"no_open": True}'/>
+                </field>
+                <notebook position="inside">
+                    <page string="Configuration" groups="microcredit_portal.group_microcredit_admin">
+                        <field name="company_profile_alias" invisible="1"/>
+                        <group string="Allowed Distributors"
+                               attrs="{'invisible':[('company_profile_alias','!=','POS')]}">
+                            <field name="company_ids" nolabel="1" widget="many2many_tags"
+                                   domain="['|',('company_profile_alias', '=', 'DISTRIBUTOR'),('company_profile_alias','=','DISTRIBUTOR_COLLECTOR')]"/>
+                        </group>
+                        <group string="Bank Accounts">
+                            <field name="bank_ids" nolabel="1" context="{'default_company_id': active_id}" />
+                        </group>
+                    </page>
+                </notebook>
+                <field name="vat" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="company_registry" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="microcredit_view_company_tree" model="ir.ui.view">
+            <field name="name">microcredit.res.company.tree</field>
+            <field name="model">res.company</field>
+            <field name='inherit_id' ref='base.view_company_tree'/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="name" position="after">
+                    <field name="company_profile_id"/>
+                </field>
+            </field>
+        </record>
+
+        <!--Filter view-->
+        <record id="filter_microcredit_res_company_view" model="ir.ui.view">
+            <field name="name">microcredit.res.company.view.filter</field>
+            <field name="model">res.company</field>
+            <field name="arch" type="xml">
+                <search string="Companies filters">
+                    <group expand="1" string="Group By">
+                        <filter string="Company profile" context="{'group_by':'company_profile_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="microcredit_action_res_company_form" model="ir.actions.act_window">
+            <field name="name">Companies</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.company</field>
+            <field name="view_type">form</field>
+            <field name="help">Create and manage the companies that will be managed by Microcredit Portal from here.</field>
+        </record>
+
+        <menuitem action="microcredit_action_res_company_form"
+                  id="microcredit_menu_action_res_company_form"
+                  parent="menu_microcredit_portal_admin_entities"
+                  sequence="1"
+                  groups="group_microcredit_admin"/>
+
+    </data>
+</odoo>

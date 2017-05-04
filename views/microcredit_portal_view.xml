@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Top menu item -->
+        <menuitem name="Administration"
+            id="menu_microcredit_portal_admin"
+            groups="group_microcredit_user"
+            sequence="1"/>
+
+        <!-- Menu Entities -->
+        <menuitem id="menu_microcredit_portal_admin_entities"
+                  parent="menu_microcredit_portal_admin"
+                  name="Entities"
+                  sequence="1" />
+
+        <!-- Menu Transactions -->
+        <menuitem id="menu_microcredit_portal_admin_transactions"
+                  parent="menu_microcredit_portal_admin"
+                  name="Transactions"
+                  sequence="2" />
+
+        <!-- Menu Report -->
+        <menuitem id="menu_microcredit_portal_admin_report"
+                  parent="menu_microcredit_portal_admin"
+                  name="Reports"
+                  sequence="3" />
+
+    </data>
+</odoo>

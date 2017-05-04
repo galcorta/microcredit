@@ -1,0 +1,801 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* microcredit_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-04 19:35+0000\n"
+"PO-Revision-Date: 2017-04-04 16:08-0400\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_PY\n"
+"X-Generator: Poedit 2.0\n"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "(reload fonts)"
+msgstr "(recargar tipos de letra)"
+
+#. module: microcredit_portal
+#: model:ir.model,name:microcredit_portal.model_res_groups
+msgid "Access Groups"
+msgstr "Grupos de acceso"
+
+#. module: microcredit_portal
+#: field:microcredit.sys.setting,active:0 field:res.company,active:0
+msgid "Active"
+msgstr "Active"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "Address"
+msgstr "Dirección"
+
+#. module: microcredit_portal
+#: model:ir.ui.menu,name:microcredit_portal.menu_microcredit_portal_admin
+msgid "Administration"
+msgstr "Administración"
+
+#. module: microcredit_portal
+#: model:ir.module.category,name:microcredit_portal.module_category_microcredit_portal_management
+msgid "Administration Portal"
+msgstr "Administración Portal"
+
+#. module: microcredit_portal
+#: model:res.groups,name:microcredit_portal.group_microcredit_admin
+msgid "Administrator"
+msgstr "Administrador"
+
+#. module: microcredit_portal
+#: field:microcredit.company.profile,alias:0
+#: field:microcredit.operation.type,alias:0 field:microcredit.trx.param,alias:0
+#: field:microcredit.trx.status,alias:0 field:res.groups,alias:0
+msgid "Alias"
+msgstr "Alias"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "Allowed Distributors"
+msgstr "Distribuidores autorizados"
+
+#. module: microcredit_portal
+#: field:microcredit.purchase.order,amount:0
+#: field:microcredit.trx.credit,amount:0 field:microcredit.trx.pay,amount:0
+msgid "Amount"
+msgstr "Monto"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.filter_microcredit_trx_credit_view
+#: field:microcredit.trx.status,approved:0
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: microcredit_portal
+#: model:ir.model,name:microcredit_portal.model_res_partner_bank
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "Bank Accounts"
+msgstr "Cuentas bancarias"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit,trx_extern:0
+#: field:microcredit.trx.pay,trx_extern:0
+msgid "Bank Transaction ID"
+msgstr "Nro. Transacción"
+
+#. module: microcredit_portal
+#: field:res.partner,business_name:0
+msgid "Business name"
+msgstr "Razón social"
+
+#. module: microcredit_portal
+#: view:microcredit.report.credit.extract.wizard:microcredit_portal.microcredit_report_credit_extract_wizard_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "City"
+msgstr "Ciudad"
+
+#. module: microcredit_portal
+#: field:microcredit.response.code,code:0 field:microcredit.trx.status,code:0
+#: field:res.company,code:0
+msgid "Code"
+msgstr "Código"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.pay:microcredit_portal.filter_microcredit_trx_pay_view
+#: model:res.groups,name:microcredit_portal.group_microcredit_ussd_collector
+msgid "Collector"
+msgstr "Cobrador"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.pay,collector_partner_id:0
+msgid "Collector partner"
+msgstr "Cobrador"
+
+#. module: microcredit_portal
+#: view:res.users:microcredit_portal.filter_microcredit_res_users_view
+msgid "Collectors"
+msgstr "Cobradores"
+
+#. module: microcredit_portal
+#: model:ir.actions.act_window,name:microcredit_portal.microcredit_action_res_company_form
+#: model:ir.model,name:microcredit_portal.model_res_company
+#: model:ir.ui.menu,name:microcredit_portal.microcredit_menu_action_res_company_form
+#: view:res.company:microcredit_portal.microcredit_view_company_tree
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.filter_microcredit_res_company_view
+msgid "Companies filters"
+msgstr "Filtros de compañias"
+
+#. module: microcredit_portal
+#: view:res.users:microcredit_portal.filter_microcredit_res_users_view
+msgid "Company"
+msgstr "Compañía"
+
+#. module: microcredit_portal
+#: field:res.company,company_ids:0
+msgid "Company ids"
+msgstr "Company ids"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.filter_microcredit_res_company_view
+#: field:res.company,company_profile_id:0
+msgid "Company profile"
+msgstr "Perfil de compañia"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "Configuration (RML)"
+msgstr "Configuración (RML)"
+
+#. module: microcredit_portal
+#: view:res.partner:microcredit_portal.microcredit_view_partner_tree
+msgid "Contacts"
+msgstr "Contactos"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "Country"
+msgstr "País"
+
+#. module: microcredit_portal
+#: model:ir.actions.act_window,help:microcredit_portal.microcredit_action_res_company_form
+msgid "Create and manage the companies that will be managed by Microcredit Portal from here."
+msgstr "Crear y gestionar las empresas que serán administradas por el portal desde aquí."
+
+#. module: microcredit_portal
+#: model:ir.actions.act_window,help:microcredit_portal.microcredit_action_res_partner_form
+msgid "Create and manage the persons that will be managed by Microcredit Portal from here."
+msgstr "Crear y gestionar las personas que serán administradas por el portal desde aquí."
+
+#. module: microcredit_portal
+#: field:microcredit.company.profile,create_uid:0
+#: field:microcredit.message.template,create_uid:0
+#: field:microcredit.operation.type,create_uid:0
+#: field:microcredit.purchase.order,create_uid:0
+#: field:microcredit.report.credit.extract.wizard,create_uid:0
+#: field:microcredit.response.code,create_uid:0
+#: field:microcredit.sms,create_uid:0
+#: field:microcredit.sys.setting,create_uid:0
+#: field:microcredit.trx.credit,create_uid:0
+#: field:microcredit.trx.credit.detail,create_uid:0
+#: field:microcredit.trx.param,create_uid:0
+#: field:microcredit.trx.pay,create_uid:0
+#: field:microcredit.trx.pay.detail,create_uid:0
+#: field:microcredit.trx.status,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: microcredit_portal
+#: field:microcredit.company.profile,create_date:0
+#: field:microcredit.message.template,create_date:0
+#: field:microcredit.operation.type,create_date:0
+#: field:microcredit.purchase.order,create_date:0
+#: field:microcredit.report.credit.extract.wizard,create_date:0
+#: field:microcredit.response.code,create_date:0
+#: field:microcredit.sms,create_date:0
+#: field:microcredit.sys.setting,create_date:0
+#: field:microcredit.trx.credit,create_date:0
+#: field:microcredit.trx.credit.detail,create_date:0
+#: field:microcredit.trx.param,create_date:0
+#: field:microcredit.trx.pay,create_date:0
+#: field:microcredit.trx.pay.detail,create_date:0
+#: field:microcredit.trx.status,create_date:0
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.filter_microcredit_trx_credit_view
+#: view:microcredit.trx.pay:microcredit_portal.filter_microcredit_trx_pay_view
+msgid "Created today"
+msgstr "Creado hoy"
+
+#. module: microcredit_portal
+#: model:ir.actions.act_window,name:microcredit_portal.action_microcredit_portal_trx_credit_form
+#: model:ir.ui.menu,name:microcredit_portal.microcredit_menu_action_trx_credit_form
+msgid "Credit Extracts"
+msgstr "Créditos"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit,credit_entity_company_id:0
+#: field:microcredit.trx.pay,credit_entity_company_id:0
+msgid "Credit entity company"
+msgstr "Compañía crediticia"
+
+#. module: microcredit_portal
+#: model:ir.actions.act_window,name:microcredit_portal.action_microcredit_report_credit_extract_wizard_view
+#: view:microcredit.report.credit.extract.wizard:microcredit_portal.microcredit_report_credit_extract_wizard_view
+msgid "Credit extract report"
+msgstr "Informe de extracto de crédito"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.microcredit_trx_credit_view_form
+msgid "Credit granted"
+msgstr "Crédito concedido"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.filter_microcredit_trx_credit_view
+msgid "Credits approved"
+msgstr "Crédito aprobado"
+
+#. module: microcredit_portal
+#: model:ir.actions.report.xml,name:microcredit_portal.report_credit_extract_wizard
+msgid "Credits extract wizard"
+msgstr "Credits extract wizard"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.filter_microcredit_trx_credit_view
+msgid "Credits filters"
+msgstr "Filtros de crédito"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.microcredit_trx_credit_view_tree
+#: view:website:microcredit_portal.credit_extract_report
+msgid "Credits granted"
+msgstr "Credits granted"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.filter_microcredit_trx_credit_view
+msgid "Credits paid"
+msgstr "Créditos cobrados"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.filter_microcredit_trx_credit_view
+msgid "Credits rejected"
+msgstr "Créditos rechazados"
+
+#. module: microcredit_portal
+#: field:microcredit.sms,date_delivered:0
+msgid "Date delivered"
+msgstr "Fecha de entrega"
+
+#. module: microcredit_portal
+#: field:microcredit.report.credit.extract.wizard,date_from:0
+msgid "Date from"
+msgstr "Fecha desde"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit.detail,date_request:0
+#: field:microcredit.trx.pay.detail,date_request:0
+msgid "Date request"
+msgstr "Fecha de solicitud"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit.detail,date_response:0
+#: field:microcredit.trx.pay.detail,date_response:0
+msgid "Date response"
+msgstr "Fecha de respuesta"
+
+#. module: microcredit_portal
+#: field:microcredit.report.credit.extract.wizard,date_to:0
+msgid "Date to"
+msgstr "Fecha hasta"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.filter_microcredit_trx_credit_view
+#: model:res.groups,name:microcredit_portal.group_microcredit_ussd_dealer
+msgid "Dealer"
+msgstr "Repartidor"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit,dealer_partner_id:0
+msgid "Dealer partner"
+msgstr "Repartidor"
+
+#. module: microcredit_portal
+#: view:res.users:microcredit_portal.filter_microcredit_res_users_view
+msgid "Dealers"
+msgstr "Repartidores"
+
+#. module: microcredit_portal
+#: field:microcredit.sms,delivered:0
+msgid "Delivered"
+msgstr "Entregado"
+
+#. module: microcredit_portal
+#: field:microcredit.operation.type,description:0
+#: field:microcredit.response.code,description:0
+#: field:microcredit.sys.setting,description:0
+#: field:microcredit.trx.credit.detail,description:0
+#: field:microcredit.trx.pay.detail,description:0
+#: field:microcredit.trx.status,description:0
+msgid "Description"
+msgstr "Descripción"
+
+#. module: microcredit_portal
+#: field:microcredit.purchase.order,company_id:0
+msgid "Distributor company"
+msgstr "Compañía distribuidora"
+
+#. module: microcredit_portal
+#: field:microcredit.report.credit.extract.wizard,partner_ids:0
+msgid "Employees"
+msgstr "Empleados"
+
+#. module: microcredit_portal
+#: model:ir.ui.menu,name:microcredit_portal.menu_microcredit_portal_admin_entities
+msgid "Entities"
+msgstr "Entidades"
+
+#. module: microcredit_portal
+#: view:res.users:microcredit_portal.filter_microcredit_res_users_view
+msgid "Filter for collectors"
+msgstr "Filtro para cobradores"
+
+#. module: microcredit_portal
+#: view:res.users:microcredit_portal.filter_microcredit_res_users_view
+msgid "Filter for dealers"
+msgstr "Filtro para repartidores"
+
+#. module: microcredit_portal
+#: view:res.users:microcredit_portal.filter_microcredit_res_users_view
+msgid "Filter for pos employees"
+msgstr "Filtro para empleados de POS"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "General Information"
+msgstr "Información general"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.filter_microcredit_trx_credit_view
+#: view:microcredit.trx.pay:microcredit_portal.filter_microcredit_trx_pay_view
+#: view:res.company:microcredit_portal.filter_microcredit_res_company_view
+#: view:res.users:microcredit_portal.filter_microcredit_res_users_view
+msgid "Group By"
+msgstr "Agrupado por"
+
+#. module: microcredit_portal
+#: model:ir.module.category,description:microcredit_portal.module_category_microcredit_portal_management
+msgid "Helps you handle your microcredit system administration portal."
+msgstr "Le ayuda a manejar su portal de administración del sistema de microcrédito."
+
+#. module: microcredit_portal
+#: model:ir.module.category,description:microcredit_portal.module_category_microcredit_ussd_application
+msgid "Helps you handle your microcredit system ussd application."
+msgstr "Le ayuda a manejar su aplicación USSD del sistema de microcrédito."
+
+#. module: microcredit_portal
+#: field:res.groups,hide_in_access_rights:0
+msgid "Hide in access rights"
+msgstr "Ocultar en permisos de acceso"
+
+#. module: microcredit_portal
+#: field:microcredit.company.profile,id:0
+#: field:microcredit.message.template,id:0
+#: field:microcredit.operation.type,id:0 field:microcredit.purchase.order,id:0
+#: field:microcredit.report.credit.extract.wizard,id:0
+#: field:microcredit.response.code,id:0 field:microcredit.sms,id:0
+#: field:microcredit.sys.setting,id:0 field:microcredit.trx.credit,id:0
+#: field:microcredit.trx.credit.detail,id:0 field:microcredit.trx.param,id:0
+#: field:microcredit.trx.pay,id:0 field:microcredit.trx.pay.detail,id:0
+#: field:microcredit.trx.status,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.param,interest:0 field:microcredit.trx.pay,interest:0
+msgid "Interest"
+msgstr "Interés"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.param,interest_on_arrears:0
+msgid "Interest on arrears"
+msgstr "Intereses de mora"
+
+#. module: microcredit_portal
+#: field:res.users,is_collector:0
+msgid "Is Collector"
+msgstr "Es cobrador"
+
+#. module: microcredit_portal
+#: field:res.users,is_dealer:0
+msgid "Is Dealer"
+msgstr "Es repartidor"
+
+#. module: microcredit_portal
+#: field:res.users,is_pos_employee:0
+msgid "Is POS Employee"
+msgstr "Es empleado de POS"
+
+#. module: microcredit_portal
+#: field:microcredit.company.profile,write_uid:0
+#: field:microcredit.message.template,write_uid:0
+#: field:microcredit.operation.type,write_uid:0
+#: field:microcredit.purchase.order,write_uid:0
+#: field:microcredit.report.credit.extract.wizard,write_uid:0
+#: field:microcredit.response.code,write_uid:0
+#: field:microcredit.sms,write_uid:0 field:microcredit.sys.setting,write_uid:0
+#: field:microcredit.trx.credit,write_uid:0
+#: field:microcredit.trx.credit.detail,write_uid:0
+#: field:microcredit.trx.param,write_uid:0
+#: field:microcredit.trx.pay,write_uid:0
+#: field:microcredit.trx.pay.detail,write_uid:0
+#: field:microcredit.trx.status,write_uid:0
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: microcredit_portal
+#: field:microcredit.company.profile,write_date:0
+#: field:microcredit.message.template,write_date:0
+#: field:microcredit.operation.type,write_date:0
+#: field:microcredit.purchase.order,write_date:0
+#: field:microcredit.report.credit.extract.wizard,write_date:0
+#: field:microcredit.response.code,write_date:0
+#: field:microcredit.sms,write_date:0
+#: field:microcredit.sys.setting,write_date:0
+#: field:microcredit.trx.credit,write_date:0
+#: field:microcredit.trx.credit.detail,write_date:0
+#: field:microcredit.trx.param,write_date:0
+#: field:microcredit.trx.pay,write_date:0
+#: field:microcredit.trx.pay.detail,write_date:0
+#: field:microcredit.trx.status,write_date:0
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: microcredit_portal
+#: view:res.users:microcredit_portal.microcredit_res_users_view_form
+msgid "Login name"
+msgstr "Nombre de usuario"
+
+#. module: microcredit_portal
+#: field:microcredit.sms,message_id:0
+msgid "Message ID"
+msgstr "Message ID"
+
+#. module: microcredit_portal
+#: field:microcredit.sms,message_template:0
+msgid "Message template"
+msgstr "Message template"
+
+#. module: microcredit_portal
+#: field:microcredit.sms,message_type:0
+msgid "Message type"
+msgstr "Message type"
+
+#. module: microcredit_portal
+#: field:res.users,msisdn:0
+msgid "Mobile phone"
+msgstr "Teléfono móvil"
+
+#. module: microcredit_portal
+#: field:microcredit.company.profile,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit,operation_type_id:0
+#: field:microcredit.trx.pay,operation_type_id:0
+msgid "Operation type"
+msgstr "Tipo de operación"
+
+#. module: microcredit_portal
+#: code:addons/microcredit_portal/models/res_users.py:69
+#, python-format
+msgid "Other"
+msgstr "Otro"
+
+#. module: microcredit_portal
+#: view:microcredit.report.credit.extract.wizard:microcredit_portal.microcredit_report_credit_extract_wizard_view
+msgid "PDF Report"
+msgstr "Informe PDF"
+
+#. module: microcredit_portal
+#: field:res.users,pin:0
+msgid "PIN"
+msgstr "PIN"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.pay,company_id:0
+msgid "POS Company"
+msgstr "Cliente"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit,pos_company_id:0
+msgid "POS Company"
+msgstr "Cliente"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit,dealer_partner_name:0
+msgid "Dealer"
+msgstr "Repartidor"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.pay,collector_partner_name:0
+msgid "Collector"
+msgstr "Cobrador"
+
+#. module: microcredit_portal
+#: model:res.groups,name:microcredit_portal.group_microcredit_ussd_pos_employee
+msgid "POS Employee"
+msgstr "Empleado POS"
+
+#. module: microcredit_portal
+#: view:res.users:microcredit_portal.filter_microcredit_res_users_view
+msgid "POS Employees"
+msgstr "Empleados del POS"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.filter_microcredit_trx_credit_view
+msgid "Paid"
+msgstr "Cobrado"
+
+#. module: microcredit_portal
+#: model:ir.model,name:microcredit_portal.model_res_partner
+msgid "Partner"
+msgstr "Socio"
+
+#. module: microcredit_portal
+#: model:ir.actions.act_window,name:microcredit_portal.action_microcredit_portal_trx_pay_form
+#: model:ir.ui.menu,name:microcredit_portal.microcredit_menu_action_trx_pay_form
+msgid "Payment Extracts"
+msgstr "Cobros"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.pay:microcredit_portal.filter_microcredit_trx_pay_view
+msgid "Payment filters"
+msgstr "Filtros de cobro"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.pay:microcredit_portal.microcredit_trx_pay_view_form
+#: view:microcredit.trx.pay:microcredit_portal.microcredit_trx_pay_view_tree
+msgid "Payments"
+msgstr "Cobros"
+
+#. module: microcredit_portal
+#: model:ir.actions.act_window,name:microcredit_portal.microcredit_action_res_partner_form
+msgid "Persons"
+msgstr "Personas"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit,pos_employee_partner_id:0
+msgid "Pos employee partner"
+msgstr "Empleado del POS"
+
+#. module: microcredit_portal
+#: view:res.users:microcredit_portal.microcredit_res_users_view_form
+msgid "Preferences"
+msgstr "Preferencias"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "Preview Header/Footer"
+msgstr "Previsualizar encabezado/pie de página"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit,purchase_order_id:0
+msgid "Purchase order"
+msgstr "Orden de compra"
+
+#. module: microcredit_portal
+#: view:res.partner:microcredit_portal.microcredit_res_partner_view_form
+msgid "RUC"
+msgstr "RUC"
+
+#. module: microcredit_portal
+#: field:microcredit.sms,reference:0 field:microcredit.trx.credit,reference:0
+#: field:microcredit.trx.pay,reference:0
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.filter_microcredit_trx_credit_view
+msgid "Rejected"
+msgstr "Créditos rechazados"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "Report Configuration"
+msgstr "Configuración de informes"
+
+#. module: microcredit_portal
+#: model:ir.model,name:microcredit_portal.model_microcredit_report_credit_extract_wizard
+msgid "Reporte de extracto de creditos con un wizard"
+msgstr "Reporte de extracto de creditos con un wizard"
+
+#. module: microcredit_portal
+#: model:ir.ui.menu,name:microcredit_portal.menu_microcredit_portal_admin_report
+msgid "Reports"
+msgstr "Informes"
+
+#. module: microcredit_portal
+#: field:microcredit.sms,response_code:0
+#: field:microcredit.trx.credit.detail,response_code_id:0
+#: field:microcredit.trx.pay.detail,response_code_id:0
+msgid "Response code"
+msgstr "Código de respuesta"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "State"
+msgstr "Provincia"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.filter_microcredit_trx_credit_view
+#: field:res.company,status:0
+msgid "Status"
+msgstr "Estado"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "Street..."
+msgstr "Calle..."
+
+#. module: microcredit_portal
+#: field:res.partner.bank,subsidiary:0
+msgid "Subsidiary"
+msgstr "Subsidiaria"
+
+#. module: microcredit_portal
+#: field:microcredit.response.code,success:0
+msgid "Success"
+msgstr "Success"
+
+#. module: microcredit_portal
+#: model:res.groups,name:microcredit_portal.group_microcredit_supervisor
+msgid "Supervisor"
+msgstr "Supervisor"
+
+#. module: microcredit_portal
+#: field:microcredit.sys.setting,sys_key:0
+msgid "Sys key"
+msgstr "Sys key"
+
+#. module: microcredit_portal
+#: field:microcredit.sys.setting,sys_value:0
+msgid "Sys value"
+msgstr "Sys value"
+
+#. module: microcredit_portal
+#: field:microcredit.sms,target_type:0
+msgid "Target type"
+msgstr "Target type"
+
+#. module: microcredit_portal
+#: field:microcredit.sms,user_id:0
+msgid "Target user"
+msgstr "Target user"
+
+#. module: microcredit_portal
+#: field:microcredit.message.template,template:0
+msgid "Template"
+msgstr "Template"
+
+#. module: microcredit_portal
+#: field:microcredit.message.template,alias:0
+msgid "Template alias"
+msgstr "Template alias"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.filter_microcredit_trx_credit_view
+#: view:microcredit.trx.pay:microcredit_portal.filter_microcredit_trx_pay_view
+msgid "Today"
+msgstr "Hoy"
+
+#. module: microcredit_portal
+#: view:microcredit.trx.credit:microcredit_portal.microcredit_trx_credit_view_tree
+#: view:microcredit.trx.pay:microcredit_portal.microcredit_trx_pay_view_tree
+msgid "Total Amount"
+msgstr "Monto total"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit,trx_param_id:0
+#: field:microcredit.trx.pay,trx_param_id:0
+msgid "Transaction parameter"
+msgstr "Parámetro de transacción"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit,trx_status_id:0
+#: field:microcredit.trx.credit.detail,trx_status_id:0
+#: field:microcredit.trx.pay,trx_status_id:0
+#: field:microcredit.trx.pay.detail,trx_status_id:0
+msgid "Transaction status"
+msgstr "Estado de transacción"
+
+#. module: microcredit_portal
+#: model:ir.ui.menu,name:microcredit_portal.menu_microcredit_portal_admin_transactions
+msgid "Transactions"
+msgstr "Extractos"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit,trx_commission:0
+msgid "Trx commission"
+msgstr "Comisión"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit.detail,trx_credit_id:0
+msgid "Trx credit id"
+msgstr "Trx credit id"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.pay,trx_credit_ids:0
+msgid "Trx credit ids"
+msgstr "Trx credit ids"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.pay.detail,trx_pay_id:0
+msgid "Trx pay id"
+msgstr "Trx pay id"
+
+#. module: microcredit_portal
+#: field:microcredit.trx.credit,trx_revert:0
+#: field:microcredit.trx.pay,trx_revert:0
+msgid "Trx revert"
+msgstr "Trx revert"
+
+#. module: microcredit_portal
+#: model:ir.module.category,name:microcredit_portal.module_category_microcredit_ussd_application
+msgid "USSD Application"
+msgstr "Aplicación USSD"
+
+#. module: microcredit_portal
+#: model:res.groups,name:microcredit_portal.group_microcredit_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: microcredit_portal
+#: model:ir.model,name:microcredit_portal.model_res_users
+#: model:ir.ui.menu,name:microcredit_portal.microcredit_menu_action_res_users_form
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "ZIP"
+msgstr "C.P."
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "e.g. Global Business Solutions"
+msgstr "Por ejemplo, Global Business Solutions"
+
+#. module: microcredit_portal
+#: view:res.partner:microcredit_portal.microcredit_res_partner_view_form
+msgid "e.g. PY44444401-7"
+msgstr "e.g. PY44444401-7"
+
+#. module: microcredit_portal
+#: view:res.company:microcredit_portal.microcredit_view_company_form
+msgid "e.g. www.odoo.com"
+msgstr "Por ejemplo, www.odoo.com"
+
+#. module: microcredit_portal
+#: view:microcredit.report.credit.extract.wizard:microcredit_portal.microcredit_report_credit_extract_wizard_view
+msgid "or"
+msgstr "or"
