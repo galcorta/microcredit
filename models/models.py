@@ -53,9 +53,6 @@ class TrxToken(models.Model):
 class TrxCredit(models.Model):
     _name = 'microcredit.trx.credit'
 
-    # currency_id = fields.Many2one('res.currency', related='purchase_order_id.company_id.currency_id', string="Operation Currency",
-    #                                       readonly=True,
-    #                                       help='Utility field to express amount currency')
     dealer_partner_id = fields.Many2one('res.partner', string='Dealer partner')
     operation_type_id = fields.Many2one('microcredit.operation.type', string='Operation type')
     purchase_order_id = fields.Many2one('microcredit.purchase.order', string='Purchase order')
@@ -67,11 +64,11 @@ class TrxCredit(models.Model):
     trx_revert = fields.Integer('Trx revert')
     trx_commission = fields.Integer('Trx commission')
     trx_extern = fields.Integer('Bank Transaction ID')
-    # amount = fields.Monetary('Amount', required=True)
     amount = fields.Float(string='Amount', digits=(14, 2), required=True)
     commission = fields.Float(string='Commission', digits=(14, 2), required=True)
     source = fields.Char('Source')
     trx_token_id = fields.Many2one('microcredit.trx.token')
+    user_device_id = fields.Many2one('microcredit.user.device')
 
     pos_company_id = fields.Many2one(related='pos_employee_partner_id.company_id', string='POS Company')
     distributor_company_id = fields.Many2one('res.company', related='purchase_order_id.company_id')
@@ -93,6 +90,7 @@ class TrxPay(models.Model):
     amount = fields.Float(string='Amount', digits=(14, 2), required=True)
     interest = fields.Float(string='Interest', digits=(14, 2))
     trx_credit_ids = fields.Many2many('microcredit.trx.credit', relation='microcredit_debt')
+    user_device_id = fields.Many2one('microcredit.user.device')
 
     collector_partner_name = fields.Char(related='collector_partner_id.name', string='Collector')
 

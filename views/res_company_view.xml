@@ -68,7 +68,7 @@
             <field name="arch" type="xml">
                 <search string="Companies filters">
                     <group expand="1" string="Group By">
-                        <filter string="Company profile" context="{'group_by':'company_profile_id'}" />
+                        <filter name="group_by_company_profile" string="Company profile" context="{'group_by':'company_profile_id'}" />
                     </group>
                 </search>
             </field>
@@ -80,6 +80,7 @@
             <field name="res_model">res.company</field>
             <field name="view_type">form</field>
             <field name="help">Create and manage the companies that will be managed by Microcredit Portal from here.</field>
+            <field name="context">{"search_default_group_by_company_profile":1}</field>
         </record>
 
         <menuitem action="microcredit_action_res_company_form"

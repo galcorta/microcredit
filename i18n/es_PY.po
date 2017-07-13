@@ -150,6 +150,7 @@ msgstr "Company ids"
 
 #. module: microcredit_portal
 #: view:res.company:microcredit_portal.filter_microcredit_res_company_view
+#: view:res.users:microcredit_portal.filter_microcredit_res_users_view
 #: field:res.company,company_profile_id:0
 msgid "Company profile"
 msgstr "Perfil de compañia"
@@ -472,7 +473,7 @@ msgstr "Ultima actualización en"
 #. module: microcredit_portal
 #: view:res.users:microcredit_portal.microcredit_res_users_view_form
 msgid "Login name"
-msgstr "Nombre de usuario"
+msgstr "C.I. (Cédula de identidad)"
 
 #. module: microcredit_portal
 #: field:microcredit.sms,message_id:0
@@ -635,6 +636,11 @@ msgid "Reports"
 msgstr "Informes"
 
 #. module: microcredit_portal
+#: model:ir.ui.menu,name:microcredit_portal.menu_microcredit_portal_admin_settings
+msgid "Settings"
+msgstr "Configuración"
+
+#. module: microcredit_portal
 #: field:microcredit.sms,response_code:0
 #: field:microcredit.trx.credit.detail,response_code_id:0
 #: field:microcredit.trx.pay.detail,response_code_id:0
@@ -731,7 +737,7 @@ msgstr "Estado de transacción"
 #. module: microcredit_portal
 #: model:ir.ui.menu,name:microcredit_portal.menu_microcredit_portal_admin_transactions
 msgid "Transactions"
-msgstr "Extractos"
+msgstr "Movimientos"
 
 #. module: microcredit_portal
 #: field:microcredit.trx.credit,trx_commission:0
@@ -799,3 +805,22 @@ msgstr "Por ejemplo, www.odoo.com"
 #: view:microcredit.report.credit.extract.wizard:microcredit_portal.microcredit_report_credit_extract_wizard_view
 msgid "or"
 msgstr "or"
+
+#. module: microcredit_portal
+#: model:ir.actions.act_window,help:microcredit_portal.microcredit_action_res_users
+msgid ""
+"Create and manage users that will connect to the system. Users can be "
+"deactivated should there be a period of time during which they will/should "
+"not connect to the system. You can assign them groups in order to give them "
+"specific access to the applications they need to use in the system."
+msgstr ""
+"Cree y gestione los usuarios que accederán al sistema. Los usuarios pueden "
+"ser desactivados si durante un periodo de tiempo no deberían acceder al "
+"sistema. Puede asignarles grupos con el fin de darles acceso a las "
+"aplicaciones que necesiten usar en el sistema."
+
+
+#. module: microcredit_portal
+#: model:ir.ui.view,arch_db:microcredit_portal.microcredit_res_users_view_form
+msgid "User devices"
+msgstr "Dispositivos asociados"

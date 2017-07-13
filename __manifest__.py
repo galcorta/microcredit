@@ -31,16 +31,19 @@
         'views/res_partner_view.xml',
         'views/res_users_view.xml',
         'security/ir.model.access.csv',
-        'microcredit_portal_report.xml',
+        'views/microcredit_portal_report.xml',
         'views/trx_credit_view.xml',
         'views/trx_pay_view.xml',
         'views/res_bank_view.xml',
         'wizard/report_credit_extract_wizard.xml',
+        'views/user_device_view.xml',
+        'views/webclient_templates.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
     ],
     'installable': True,
+    'application': True,
     'auto_install': False,
 
 }

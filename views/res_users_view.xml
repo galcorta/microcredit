@@ -14,17 +14,13 @@
                 <field name="login" position="replace">
                     <field name="login" placeholder="Por ejemplo: jperez"/>
                 </field>
-
+                
                 <field name="company_id" position="replace"/>
                 <xpath expr="//div[@class='oe_title']/group" position="before">
                     <label for="company_id" class="oe_edit_only" groups="base.group_multi_company,microcredit_portal.group_microcredit_admin"/>
                     <h4>
                         <field name="company_id" context="{'user_preference': 0}" groups="base.group_multi_company,microcredit_portal.group_microcredit_admin"/>
                     </h4>
-                </xpath>
-
-                <xpath expr="//notebook/page[2]" position="attributes">
-                    <attribute name="invisible">1</attribute>
                 </xpath>
 
                 <xpath expr="//notebook/page[1]" position="inside">
@@ -38,6 +34,22 @@
                         </group>
                     </group>
                 </xpath>
+
+                <xpath expr="//notebook/page[2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <notebook position="inside">
+                    <page name="user_devices" string="User devices">
+                        <group/>
+                        <group>
+                            <p><b>Observación:</b> Solo se listan dispositivos no liberados. Se asume que un dispositivo liberado puede ser utilizado por cualquier usuario.</p>
+                        </group>                    
+                        <group>
+                            <field name="user_device_ids" string="Devices" widget="many2many_tags" domain="[('released', '=', False)]"/>
+                        </group>
+                    </page>
+                </notebook>
             </field>
         </record>
 
@@ -46,8 +58,7 @@
             <field name="model">res.users</field>
             <field name='inherit_id' ref='base.view_users_tree'/>
             <field name="arch" type="xml">
-                <field name="lang" position="replace">
-                </field>
+                <field name="lang" position="replace"/>
                 <field name="name" position="after">
                     <field name="company_id"/>
                 </field>
@@ -62,29 +73,6 @@
                 <xpath expr="//group[2]" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
-<!--                <group string="Email Preferences" position="attributes">
-                    <attribute name="invisible">1</attribute>
-                </group>-->
-            </field>
-        </record>
-
-        <!--Filter view-->
-        <record id="filter_microcredit_res_users_view" model="ir.ui.view">
-            <field name="name">res.users.view.filter</field>
-            <field name="model">res.users</field>
-            <field name='inherit_id' ref='base.view_users_search'/>
-            <field name="arch" type="xml">
-                <field name="company_ids" position="after">
-                    <filter string="Dealers" separator="1" name="dealers"
-                            domain="[('is_dealer','=', True)]" help="Filter for dealers"/>
-                    <filter string="Collectors" separator="1" name="collectors"
-                            domain="[('is_collector','=', True)]" help="Filter for collectors"/>
-                    <filter string="POS Employees" separator="1" name="pos_employees"
-                            domain="[('is_pos_employee','=', True)]" help="Filter for pos employees"/>
-                    <group expand="1" string="Group By">
-                        <filter string="Company" context="{'group_by':'company_id'}" />
-                    </group>
-                </field>
             </field>
         </record>
 
@@ -100,7 +88,53 @@
             </field>
         </record>
 
-        <menuitem action="base.action_res_users"
+        <!--Filter view-->
+        <record id="filter_microcredit_res_users_view" model="ir.ui.view">
+            <field name="name">res.users.view.filter</field>
+            <field name="model">res.users</field>
+            <field name='inherit_id' ref='base.view_users_search'/>
+            <field name="arch" type="xml">
+                <filter name="no_share" position="replace"/> 
+                <field name="company_ids" position="after">
+                    <filter string="Dealers" separator="1" name="dealers"
+                            domain="[('is_dealer','=', True)]" help="Filter for dealers"/>
+                    <filter string="Collectors" separator="1" name="collectors"
+                            domain="[('is_collector','=', True)]" help="Filter for collectors"/>
+                    <filter string="POS Employees" separator="1" name="pos_employees"
+                            domain="[('is_pos_employee','=', True)]" help="Filter for pos employees"/>
+                    <group expand="1" string="Group By">
+                        <filter name="group_by_company" string="Company" context="{'group_by':'company_id'}" />
+                        <filter string="Company profile" context="{'group_by':'company_profile_id'}" />
+                    </group>
+                </field>
+            </field>
+        </record>
+
+        <record id="microcredit_action_res_users" model="ir.actions.act_window">
+            <field name="name">Users</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.users</field>
+            <field name="view_type">form</field>
+             <field name="view_id" ref="base.view_users_tree"/> 
+            <field name="search_view_id" ref="base.view_users_search"/>  
+            <field name="domain">[('share','=',False)]</field>
+            <field name="context">{'search_default_group_by_company': 1}</field>
+            <field name="help">Create and manage users that will connect to the system. Users can be deactivated should there be a period of time during which they will/should not connect to the system. You can assign them groups in order to give them specific access to the applications they need to use in the system.</field>
+        </record>
+         <record id="microcredit_action_res_users_view1" model="ir.actions.act_window.view">
+            <field eval="10" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="base.view_users_tree"/>
+            <field name="act_window_id" ref="microcredit_action_res_users"/>
+        </record>
+        <record id="microcredit_action_res_users_view2" model="ir.actions.act_window.view">
+            <field eval="20" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="base.view_users_form"/>
+            <field name="act_window_id" ref="microcredit_action_res_users"/>
+        </record>
+
+        <menuitem action="microcredit_action_res_users"
           id="microcredit_menu_action_res_users_form"
           parent="menu_microcredit_portal_admin_entities"
           sequence="2"

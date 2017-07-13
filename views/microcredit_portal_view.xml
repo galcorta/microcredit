@@ -3,9 +3,10 @@
     <data>
 
         <!-- Top menu item -->
-        <menuitem name="Administration"
+        <menuitem name="Microcredito"
             id="menu_microcredit_portal_admin"
             groups="group_microcredit_user"
+            web_icon="microcredit_portal,static/description/web_icon.png"
             sequence="1"/>
 
         <!-- Menu Entities -->
@@ -25,6 +26,12 @@
                   parent="menu_microcredit_portal_admin"
                   name="Reports"
                   sequence="3" />
+
+         <!-- Menu Settings -->
+        <menuitem id="menu_microcredit_portal_admin_settings"
+                  parent="menu_microcredit_portal_admin"
+                  name="Settings"
+                  sequence="4" />
 
     </data>
 </odoo>

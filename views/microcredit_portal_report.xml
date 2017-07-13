@@ -6,9 +6,9 @@
             model="microcredit.trx.credit"
             string="Credits extract wizard"
             report_type="qweb-pdf"
-            name="microcredit_portal.credit.extract.wizard.qweb"
+            name="microcredit_portal.credit_extract"
             attachment_use="False"
-            file="microcredit_portal.credit.extract.wizard.qweb"
+            file="microcredit_portal.credit_extract"
             menu="False"
         />
 

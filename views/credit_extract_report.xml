@@ -2,16 +2,16 @@
 <!--Custom report.-->
 <odoo>
 <data>
-    <template id="credit_extract_report">
+    <template id="credit_extract">
         <t t-call="report.html_container">
-            <t t-foreach="docs" t-as="o">
+            <!--<t t-foreach="docs" t-as="o">-->
                 <t t-call="report.external_layout">
                     <div class="page">
                         <h2>Credits granted</h2>
 
                     </div>
                 </t>
-            </t>
+            <!--</t>-->
         </t>
     </template>
 

@@ -77,72 +77,20 @@ class ResUsers(models.Model):
     is_dealer = fields.Boolean(compute='_get_is_dealer', string='Is Dealer', store=True)
     is_collector = fields.Boolean(compute='_get_is_collector', string='Is Collector', store=True)
     is_pos_employee = fields.Boolean(compute='_get_is_pos_employee', string='Is POS Employee', store=True)
+    company_profile_id = fields.Many2one(related='company_id.company_profile_id', store=True)
+    user_device_ids = fields.Many2many('microcredit.user.device')
 
     @api.onchange('company_id')
     def on_change_company_id(self):
-        self.parent_id = self.company_id.partner_id
+        # self.parent_id = self.company_id.partner_id
         if self.company_id not in self.company_ids:
-            for c in self.company_ids:
-                self.company_ids -= c
-
+            # for c in self.company_ids:
+            #     self.company_ids -= c
             self.company_ids += self.company_id
-
-    # def fields_get(self, cr, uid, allfields=None, context=None, write_access=True, attributes=None):
-    #     res = super(ResUsers, self).fields_get(cr, uid, allfields, context, write_access, attributes)
-    #     # add reified groups fields
-    #     if uid != SUPERUSER_ID and not self.pool['res.users'].has_group(cr, uid, 'base.group_erp_manager') \
-    #             and not self.pool['res.users'].has_group(cr, uid, 'microcredit_portal.group_microcredit_admin') \
-    #             and not self.pool['res.users'].has_group(cr, uid, 'microcredit_portal.group_microcredit_supervisor'):
-    #         return res
-    #     for app, kind, gs in self.pool['res.groups'].get_groups_by_application(cr, uid, context):
-    #         if kind == 'selection':
-    #             # selection group field
-    #             tips = ['%s: %s' % (g.name, g.comment) for g in gs if g.comment]
-    #             res[name_selection_groups(map(int, gs))] = {
-    #                 'type': 'selection',
-    #                 'string': app and app.name or _('Other'),
-    #                 'selection': [(False, '')] + [(g.id, g.name) for g in gs],
-    #                 'help': '\n'.join(tips),
-    #                 'exportable': False,
-    #                 'selectable': False,
-    #             }
-    #         else:
-    #             # boolean group fields
-    #             for g in gs:
-    #                 res[name_boolean_group(g.id)] = {
-    #                     'type': 'boolean',
-    #                     'string': g.name,
-    #                     'help': g.comment,
-    #                     'exportable': False,
-    #                     'selectable': False,
-    #                 }
-    #     return res
 
 
 class GroupsView(models.Model):
     _inherit = 'res.groups'
-
-    # def get_application_groups(self, cr, uid, domain=None, context=None):
-    #     """ return the list of groups available to an user to generate virtual fields """
-    #
-    #     # TO REMOVE IN 9.0
-    #     # verify if share column is present on the table
-    #     # can not be done with override as can not ensure the module share is loaded
-    #     # during an upgrade of another module (e.g. if has less dependencies than share)
-    #     # use ir.model.fields as _fields may not have been populated yet
-    #
-    #     domain = []
-    #     cr.execute("SELECT id FROM res_groups WHERE hide_in_access_rights IS true")
-    #     domain.append(('id', 'not in', [gid for (gid,) in cr.fetchall()]))
-    #
-    #     got_share = self.pool['ir.model.fields'].search_count(cr, uid, [
-    #         ('name', '=', 'share'), ('model', '=', 'res.groups')], context=context)
-    #     if got_share:
-    #         # remove non-shared groups in SQL as 'share' may not be in _fields
-    #         cr.execute("SELECT id FROM res_groups WHERE share IS true")
-    #         domain.append(('id', 'not in', [gid for (gid,) in cr.fetchall()]))
-    #
-    #     return self.search(cr, uid, domain or [])
 
     @api.model
     def get_groups_by_application(self):

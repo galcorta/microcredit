@@ -58,7 +58,7 @@
 
         <record id="microcredit_company_profile_dealer_collector" model="microcredit.company.profile">
             <field name="alias">DISTRIBUTOR_COLLECTOR</field>
-            <field name="name">Distribuidor y Agencia de cobranza</field>
+            <field name="name">Distribuidor y agencia de cobranza</field>
         </record>
 
         <record id="microcredit_company_profile_credit_entity" model="microcredit.company.profile">

@@ -22,4 +22,3 @@ class ResCompany(models.Model):
     ws_user = fields.Char('Web service user')
     ws_password = fields.Char('Web service password')
     commission_percent = fields.Float(string='Commission percent', digits=(2, 2))
-
